@@ -1,4 +1,7 @@
 import React from 'react';
+import { HelmetDatoCms } from 'gatsby-source-datocms'
+
+import { graphql } from 'gatsby'
 
 import itacaLogo from '../../images/itaca-logo.png';
 import alatinLogo from '../../images/alatin-logo.png';
