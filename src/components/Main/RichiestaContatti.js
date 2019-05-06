@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Text, Select, TextArea, Checkbox } from 'react-form';
 import isEmail from 'validator/lib/isEmail';
-
 import LoadingIndicator from '../LoadingIndicator';
 
 const errorValidator = (values) => ({
