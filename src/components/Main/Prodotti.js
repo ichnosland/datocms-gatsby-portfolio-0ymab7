@@ -18,7 +18,9 @@ export default ({ data }) => (
       
       <div>
         <p className="sidebar__social">
-        {JSON.stringify(data)}
+        {data.allDatoCmsWork.edges.map(({ node: work }) => (
+          <p>{work.title}</p>
+        ))}
           </p>
       </div>
       
