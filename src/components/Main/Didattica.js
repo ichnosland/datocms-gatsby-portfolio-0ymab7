@@ -14,7 +14,7 @@ export default ({ data }) => (
         <div className="container row">
         {data.allDatoCmsDidattica.edges.map(({ node: didattica }) => (          
           <div className="col col-1-2">
-            <img src={didattica.cover.src} className="col-icn" alt="" />
+            <img src={didattica.cover.url} className="col-icn" alt="" />
             <p>{didattica.description}</p>
           </div>
         ))}
