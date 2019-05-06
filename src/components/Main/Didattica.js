@@ -1,7 +1,7 @@
 import React from 'react';
 
-import icnChi from '../images/chi-icn.png';
-import icnDigFirst from '../images/dig-first-icn.png';
+import icnChi from '../../images/chi-icn.png';
+import icnDigFirst from '../../images/dig-first-icn.png';
 
 function Didattica() {
   return (

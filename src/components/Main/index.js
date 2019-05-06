@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import tabletLogo from '../images/tablet-logo.png';
-import phoneLogo from '../images/phone-logo.png';
+import tabletLogo from '../../images/tablet-logo.png';
+import phoneLogo from '../../images/phone-logo.png';
 
-import Header from 'components/Header';
+import Header from '../Header';
 import RichiestaContatti from './RichiestaContatti';
 import Didattica from './Didattica';
 import Prodotti from './Prodotti';
