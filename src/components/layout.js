@@ -10,7 +10,7 @@ import Header from './Header';
 import Prodotti from './Main/Prodotti';
 import Didattica from './Main/Didattica';
 
-//import RichiestaContatti from './Main/RichiestaContatti';
+import RichiestaContatti from './Main/RichiestaContatti';
 import '../styles/index.sass'
 
 const TemplateWrapper = ({ children }) => (
