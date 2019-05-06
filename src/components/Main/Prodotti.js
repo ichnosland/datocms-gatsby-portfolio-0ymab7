@@ -16,14 +16,9 @@ function Prodotti() {
       </div>
       
       <div>
-      <p className="sidebar__social">
-            {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
-              <a
-                key={profile.profileType}
-                href={profile.url}
-                target="blank"
-                className={`social social--${profile.profileType.toLowerCase()}`}
-              > </a>
+        <p className="sidebar__social">
+        {data.datoCmsWork.gallery.map(({ fluid }) => (
+              <img alt={data.datoCmsWork.title} key={fluid.src} src={fluid.src} />
             ))}
           </p>
       </div>
@@ -72,3 +67,33 @@ function Prodotti() {
 }
 
 export default Prodotti;
+
+
+export const query = graphql`
+  query WorkQuery($slug: String!) {
+    datoCmsWork(slug: { eq: $slug }) {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+      title
+      excerpt
+      gallery {
+        fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
+          src
+        }
+      }
+      descriptionNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      coverImage {
+        url
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
+    }
+  }
+`
+
