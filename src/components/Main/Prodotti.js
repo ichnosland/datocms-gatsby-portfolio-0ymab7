@@ -1,6 +1,5 @@
 import React from 'react';
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-
 import { graphql } from 'gatsby'
 
 import itacaLogo from '../../images/itaca-logo.png';
@@ -8,7 +7,7 @@ import alatinLogo from '../../images/alatin-logo.png';
 import argonautaLogo from '../../images/argonauta-logo.png';
 import csgLogo from '../../images/csg-logo.png';
 
-function Prodotti() {
+export default ({ data }) => (
   return (
     <section id="prodotti">
       <div className="arrow top">
@@ -68,9 +67,6 @@ function Prodotti() {
     </section>
   );
 }
-
-export default Prodotti;
-
 
 export const query = graphql`
   query WorkQuery($slug: String!) {
