@@ -1,11 +1,5 @@
 import React from 'react';
-import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { graphql } from 'gatsby'
-
-import itacaLogo from '../../images/itaca-logo.png';
-import alatinLogo from '../../images/alatin-logo.png';
-import argonautaLogo from '../../images/argonauta-logo.png';
-import csgLogo from '../../images/csg-logo.png';
 
 export default ({ data }) => (
     <section id="prodotti">
@@ -21,10 +15,8 @@ export default ({ data }) => (
         <div className="outer-arrow small"></div>
       </div>
       <div className="container row row-wrap first">
-        {data.allDatoCmsProdotti.edges.map(({ node: project }) => (
-          
+        {data.allDatoCmsProdotti.edges.map(({ node: project }) => (          
           <a className="col col-1-3 thumb-link" href={project.link} id="itaca" title={project}>
-          {JSON.stringify(project.logo)}
             <img className="col-icn small" src={project.logo.url} alt={project.title} />
             <p>
               {project.description}
