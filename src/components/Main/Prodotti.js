@@ -8,7 +8,6 @@ import argonautaLogo from '../../images/argonauta-logo.png';
 import csgLogo from '../../images/csg-logo.png';
 
 export default ({ data }) => (
-  return (
     <section id="prodotti">
       <div className="arrow top">
         <div className="arrow-wrap">
@@ -65,8 +64,7 @@ export default ({ data }) => (
         </div>
       </div>
     </section>
-  );
-}
+  )
 
 export const query = graphql`
   query WorkQuery($slug: String!) {
