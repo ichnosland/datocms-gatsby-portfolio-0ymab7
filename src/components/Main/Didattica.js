@@ -1,8 +1,5 @@
 import React from 'react';
 
-import icnChi from '../../images/chi-icn.png';
-import icnDigFirst from '../../images/dig-first-icn.png';
-
 export default ({ data }) => (
   <div>
       <section id="chisiamo" className="filler">
