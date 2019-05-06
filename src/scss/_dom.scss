@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background: $soft-grey url(../images/html-bg.png);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  height: 100%;
+  margin: 0;
+  color: $grey;
+}
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}
+section {
+  position: relative;
+  text-align: center;
+  background-color: $white;
+  &.neutral {
+    background-color: transparent;
+  }
+}
+footer {
+  color: $white;
+  padding: 6px 12px 4px;
+  position: relative;
+  border-top-left-radius: 0;
+  text-align: center;
+  background-color: $dark-brand;
+
+  p {
+    text-align: center;
+    padding: 6px 0 4px 0;
+    &.mini-p {
+      font-size: 9px;
+    }
+    @include lg {
+      font-size: 10px;
+      &.mini-p {
+        font-size: 6px;
+      }
+    }
+  }
+}

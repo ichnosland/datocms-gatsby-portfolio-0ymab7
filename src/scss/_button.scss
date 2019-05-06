@@ -1,0 +1,33 @@
+@mixin button-variant($color, $background) {
+  color: $color;
+  background-color: $background;
+  &:active {
+    color: $color;
+    background-color: darken($background, 10%);
+  }
+  &:hover {
+    color: $color;
+  }
+}
+.btn,
+button {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 28px 10px;
+  box-shadow: none;
+  background-image: none;
+  border: none;
+  border-radius: 3px;
+  &:active,
+  &:focus,
+  &:active:focus,
+  &.active:focus,
+  &.active {
+    outline: none !important;
+  }
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  @include button-variant(#fff, $brand);
+}

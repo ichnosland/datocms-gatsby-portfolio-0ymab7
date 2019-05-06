@@ -1,0 +1,31 @@
+@mixin xl{
+  @media (min-width: 1025px) { @content ; }
+}
+@mixin lg{
+  @media (max-width: 1024px) { @content ; }
+}
+@mixin md {
+  @media (max-width: 768px) { @content; }
+}
+@mixin sm {
+  @media (max-width: 667px) { @content; }
+}
+@mixin xs {
+  @media (max-width: 480px) { @content; }
+}
+// classi di supporto:
+.sm-only {
+  @media (min-width: 668px) {
+    display: none!important;
+  }
+}
+.md-up-only {
+  @include sm {
+    display: none!important;
+  }
+}
+.xl-only {
+  @include lg {
+    display: none!important;
+  }
+}

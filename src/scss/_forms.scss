@@ -1,0 +1,218 @@
+@import 'button';
+
+$border: 1px solid rgb(230, 230, 230);
+$background: $white;
+
+#contatti {
+  background-color: transparent;
+}
+form {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  justify-content: center;
+}
+.input-field {
+  margin-bottom: 18px;
+  width: 100%;
+  background-image: none;
+  padding: 6px 13px 6px 13px;
+  border-radius: 3px;
+  outline: 0;
+  background-color: $background;
+  border: $border;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus {
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem $brand;
+  }
+  &:invalid {
+    // Rimuove l'immondo bordo rosso
+    // dai campi obbligatori su Firefox
+    box-shadow: none;
+  }
+}
+@mixin placeholder-style {
+    position: relative;
+    color: rgba(0, 0, 0, 0.3);
+    opacity:1;
+    overflow: visible;
+}
+.input-field:-moz-placeholder {
+    @include placeholder-style;
+}
+.input-field::-moz-placeholder {
+    @include placeholder-style;
+}
+.input-field:-ms-input-placeholder {
+    @include placeholder-style;
+}
+.input-field::-webkit-input-placeholder {
+    @include placeholder-style;
+}
+.input-field:input-placeholder {
+    @include placeholder-style;
+}
+.form-element {
+  position: relative;
+  margin: 0 0 18px;
+}
+.text-area {
+  width: 100%;
+  min-height: 180px;
+  resize: none;
+}
+.form-note {
+  color: $dark-brand;
+  text-align: right;
+}
+.check-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  a {
+    display: inline-block;
+    text-decoration: underline;
+  }
+  @include sm {
+    display: block;
+  }
+}
+.checkbox {
+  display: inline-block;
+  margin-right: 10px;
+  &:invalid {
+    box-shadow: none;
+  }
+}
+.errormessage {
+  position: relative;
+  top: -10px;
+  display: inline-block;
+  color: red;
+}
+
+.form__btn {
+  min-width: 180px;
+  @include sm {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/*
+ * Select
+ */
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: .5rem 2.25rem .5rem 1rem;
+}
+/* Undo the Firefox inner focus ring */
+.select select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+/* Dropdown arrow */
+.selectwrap{
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 32%;
+    right: 1rem;
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-top: .35rem solid $dark-brand;
+    border-right: .35rem solid transparent;
+    border-bottom: .35rem solid transparent;
+    border-left: .35rem solid transparent;
+  }
+}
+
+/* Focus */
+.select select:focus {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem $brand;
+}
+
+/* Active/open */
+.select select:active {
+  color: #fff;
+  background-color: $brand;
+}
+
+/* Hide the arrow in IE10 and up */
+.select select::-ms-expand {
+  display: none;
+}
+
+/* Media query to target Firefox only */
+@-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
+  .select select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem;
+  }
+
+  /* <option> elements inherit styles from <select>, so reset them. */
+  .select option {
+    background-color: #fff;
+  }
+}
+
+/* IE9 hack to hide the arrow */
+@media screen and (min-width:0\0) {
+  .select select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+  .select:after {
+    z-index: 5;
+  }
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: #eee;
+  }
+  .select select:hover,
+  .select select:focus,
+  .select select:active {
+    color: #555;
+    background-color: #eee;
+  }
+}
+
+.form-feedback {
+  display: inline-block;
+  margin: 60px auto 40px;
+  padding: 16px ;
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  p {
+    color: #8dbf29;
+    padding: 0;
+    text-align: center;
+    &.error {
+      color: red;
+    }
+   }
+}

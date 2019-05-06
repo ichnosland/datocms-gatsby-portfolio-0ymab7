@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 10px 42px;
+  &.first {
+    padding-bottom: 0;
+  }
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  @include sm {
+    flex-direction: column;
+    // align-content: center;
+    align-items: center;
+  }
+}
+.col {
+  padding: 10px;
+  &-1-2 {
+    width: 50%;
+    position: relative;
+    @media (min-width: 667px) {
+      margin-top: -204px;
+    }
+    @include md {
+      margin-top: -143px;
+    }
+    @include sm {
+      width: 100%;
+      padding: 0 5% 10%;
+      margin: 0!important;
+      border-bottom: 1px solid $soft-grey;
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+  &-1-3 {
+    width: 40%;
+    @include sm {
+      width: 100%;
+      padding: 5%;
+      border-bottom: 1px solid $soft-grey;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+@include sm {
+  #alatin {
+    order: -2;
+  }
+  #itaca {
+    order: -1;
+  }
+}
+.col-icn {
+  width: 100%;
+  &.small {
+    width: 80%;
+  }
+  @include sm {
+    max-width: 320px;
+  }
+}
+.thumb-link {
+  color: $dark;
+  display: inline-block;
+  border-radius: 12px;
+  &:hover{
+    color: $dark;
+    @include xl {
+      background-color: $soft-grey;
+    }
+  }
+}
+#hero {
+  padding-bottom: 0;
+  background-color: transparent;
+  .container {
+    margin-top: 7%;
+    padding: 0;
+  }
+  #logo {
+    max-width: 642px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 0;
+    @include sm {
+      max-width: 334px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.filler {
+  @media (min-width: 667px) {
+    height: 365px;
+    background-color: transparent;
+    border-bottom: 1px solid $brand;
+  }
+  @include md {
+    height: 315px;
+  }
+  @include sm {
+    height: auto;
+  }
+}
+
+@import 'arrow';

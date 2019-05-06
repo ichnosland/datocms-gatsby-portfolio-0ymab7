@@ -1,0 +1,92 @@
+body {
+  color: $dark;
+}
+body,
+input,
+textarea,
+button,
+select {
+  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+$seo-width: 38px;
+
+.seo {
+  position: relative;
+  width: $seo-width;
+  height: $seo-width;
+  margin: 0;
+  overflow: hidden;
+  a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $seo-width;
+    height: 0;
+    padding: $seo-width 0 0;
+    margin: 0;
+    background-image: url(../images/MLMG.png);
+    background-size: $seo-width $seo-width;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+}
+p {
+  margin: 0 0.6em;
+  padding-top: 20px;
+  text-align: left;
+}
+#prodotti p {
+  text-align: center;
+}
+a {
+  color: $brand;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    color: $dark-brand;
+  }
+}
+h1 {
+  font-size: 2.4em;
+  color: $dark-brand;
+  font-family: 'Titillium Web';
+  font-weight: normal;
+  position: relative;
+}
+h2 {
+  color: $white;
+  margin: 0;
+  padding: 32px 0;
+  font-size: 2em;
+  background-color: $brand;
+  border-top: 38px solid $dark-brand;
+  font-weight: normal;
+  font-family: 'Titillium Web';
+}
+h3 {
+  font-size: 1.6em;
+  color: $dark-brand;
+  font-family: 'Titillium Web';
+  font-weight: normal;
+  position: relative;
+}
+.paragraph {
+  h1 {
+    margin: 64px auto 32px;
+  }
+  h3 {
+    margin: 32px auto 16px;
+  }
+  h4 {
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+  p {
+    padding: 0;
+    margin: 0 0 0.6em;
+  }
+}
