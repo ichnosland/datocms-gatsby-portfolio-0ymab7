@@ -9,8 +9,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import Header from './Header';
 import Prodotti from './Main/Prodotti';
-
-//import Didattica from './Main/Didattica';
+import Didattica from './Main/Didattica';
 
 //import RichiestaContatti from './Main/RichiestaContatti';
 import '../styles/index.sass'
