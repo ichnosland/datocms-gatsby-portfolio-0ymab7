@@ -67,7 +67,7 @@ export default ({ data }) => (
   )
 
 export const query = graphql`
-  query WorkQuery($slug: String!) {
+  query ProductQuery($slug: String!) {
     datoCmsWork(slug: { eq: $slug }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
