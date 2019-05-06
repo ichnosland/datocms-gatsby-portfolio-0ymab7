@@ -25,7 +25,7 @@ class Main extends React.PureComponent { // eslint-disable-line react/prefer-sta
         <Prodotti />
         <Didattica />
         <RichiestaContatti
-          {...this.props.formContatti}
+          {...formContatti}
         />
       </div>
     );
