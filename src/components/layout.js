@@ -45,21 +45,12 @@ const TemplateWrapper = ({ children }) => (
           }
         }
       }
-      datoCmsWork(slug: { eq: $slug }) {
-        seoMetaTags {
-          ...GatsbyDatoCmsSeoMetaTags
-        }
-        title
-        excerpt
-        descriptionNode {
-          childMarkdownRemark {
-            html
-          }
-        }
-        coverImage {
-          url
-          fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-            ...GatsbyDatoCmsSizes
+      datoCmsProdotti {
+        edges {
+          node {
+            title
+            description
+            link
           }
         }
       }
