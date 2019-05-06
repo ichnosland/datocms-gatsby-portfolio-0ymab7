@@ -32,26 +32,3 @@ export default ({ data }) => (
     </section>
   )
 
-export const query = graphql`
-  query ProductQuery($slug: String!) {
-    datoCmsWork(slug: { eq: $slug }) {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      title
-      excerpt
-      descriptionNode {
-        childMarkdownRemark {
-          html
-        }
-      }
-      coverImage {
-        url
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsSizes
-        }
-      }
-    }
-  }
-`
-
