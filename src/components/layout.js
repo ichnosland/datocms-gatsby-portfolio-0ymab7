@@ -46,11 +46,9 @@ const TemplateWrapper = ({ children }) => (
         }
       }
       datoCmsProdotti {
-          node {
             title
             description
             link
-          }
       }
     }
   `}
