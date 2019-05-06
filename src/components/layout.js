@@ -81,7 +81,9 @@ const TemplateWrapper = ({ children }) => (
     )}
   />
 )
-Main.propTypes = {
+
+
+TemplateWrapper.propTypes = {
   formContatti: PropTypes.shape({
     spinner: PropTypes.bool.isRequired,
     error_message: PropTypes.string.isRequired,
@@ -89,11 +91,6 @@ Main.propTypes = {
       key: PropTypes.string.isRequired,
       value: PropTypes.string.isRequired,
     })).isRequired,
-  }).isRequired,
-};
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.object,
-}
+  }).isRequired,}
 
 export default TemplateWrapper
