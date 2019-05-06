@@ -24,7 +24,7 @@ export default ({ data }) => (
         {data.allDatoCmsProdotti.edges.map(({ node: project }) => (
           
           <a className="col col-1-3 thumb-link" href={project.link} id="itaca" title={project}>
-            <img className="col-icn small" src={project.logo.src} alt={project.title} />
+            <img className="col-icn small" src={project.logo} alt={project.title} />
             <p>
               {project.description}
             </p>
