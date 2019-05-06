@@ -31,6 +31,16 @@ export default ({ data }) => (
         <div className="outer-arrow small"></div>
       </div>
       <div className="container row first">
+        {data.allDatoCmsProdotti.edges.map(({ node: project }) => (
+          
+          <a className="col col-1-3 thumb-link" href="http://itaca.academy" id="itaca" title="Itaca">
+            <img className="col-icn small" src={project.logo} alt="{project.title}" />
+            <p>
+              {project.description}
+            </p>
+          </a>
+        ))}
+
         <a className="col col-1-3 thumb-link" href="http://itaca.academy" id="itaca" title="Itaca">
           <img className="col-icn small" src={itacaLogo} alt="Itaca" />
           <p>
