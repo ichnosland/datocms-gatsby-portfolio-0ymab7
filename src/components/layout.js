@@ -45,10 +45,14 @@ const TemplateWrapper = ({ children }) => (
           }
         }
       }
-      datoCmsProdotti {
-            title
-            description
-            link
+      allDatoCmsProdotti {
+        edges {
+          node {
+          title
+          description
+          link
+          }
+        }
       }
     }
   `}
