@@ -48,10 +48,10 @@ const TemplateWrapper = ({ children }) => (
       allDatoCmsProdotti {
         edges {
           node {
-          logo
-          title
-          description
-          link
+            logo
+            title
+            description
+            link
           }
         }
       }
