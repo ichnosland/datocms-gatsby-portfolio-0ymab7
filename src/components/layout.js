@@ -53,14 +53,7 @@ const TemplateWrapper = ({ children }) => (
         seo={data.datoCmsHome.seoMetaTags}
       />
 <Header />
-        <section id="hero">
-          <div className="container">
-            <div id="logo">
-              <img src={tabletLogo} alt="Maieutical Labs" className="md-up-only" />
-              <img src={phoneLogo} alt="Maieutical Labs" className="sm-only" />
-            </div>
-          </div>
-        </section>
+        
         
 
       {/*
