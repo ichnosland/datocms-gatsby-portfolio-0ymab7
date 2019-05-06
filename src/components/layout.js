@@ -48,6 +48,12 @@ const TemplateWrapper = ({ children }) => (
       allDatoCmsProdotti {
         edges {
           node {
+            logo {
+              url
+              fluid(maxWidth: 600, imgixParams: { fm: "png", auto: "compress" }) {
+                ...GatsbyDatoCmsSizes
+              }
+            } 
             title
             description
             link
