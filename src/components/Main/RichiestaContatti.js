@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Form, Text, Select, TextArea, Checkbox } from 'react-form';
 import isEmail from 'validator/lib/isEmail';
 
-import LoadingIndicator from 'components/LoadingIndicator';
+import LoadingIndicator from '../LoadingIndicator';
 
 const errorValidator = (values) => ({
   email: values.email && !isEmail(values.email) ? 'Il campo email non è formattato correttamente' : null,

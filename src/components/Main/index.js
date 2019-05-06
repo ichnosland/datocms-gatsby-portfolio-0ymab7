@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import tabletLogo from 'images/tablet-logo.png';
-import phoneLogo from 'images/phone-logo.png';
+import tabletLogo from '../images/tablet-logo.png';
+import phoneLogo from '../images/phone-logo.png';
 
 import Header from 'components/Header';
 import RichiestaContatti from './RichiestaContatti';
