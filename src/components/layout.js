@@ -62,7 +62,7 @@ const TemplateWrapper = ({ children }) => (
             </div>
           </div>
         </section>
-        <Prodotti data={children}/>
+        <Prodotti data={data}/>
         <Didattica />
         
 
