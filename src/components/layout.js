@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 
 import tabletLogo from '../images/tablet-logo.png';
 import phoneLogo from '../images/phone-logo.png';
@@ -75,6 +74,9 @@ const TemplateWrapper = ({ children }) => (
       </section>
       <Prodotti data={data}/>
       <Didattica data={data}/>
+      <RichiestaContatti
+          {...this.props.formContatti}
+        />
     </div>
     )}
   />
