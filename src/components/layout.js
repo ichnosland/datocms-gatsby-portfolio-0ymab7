@@ -48,7 +48,6 @@ const TemplateWrapper = ({ children }) => (
       allDatoCmsProdotti {
         edges {
           node {
-            logo {src}
             title
             description
             link
