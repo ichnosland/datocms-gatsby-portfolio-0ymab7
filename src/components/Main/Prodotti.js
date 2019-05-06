@@ -18,7 +18,7 @@ export default ({ data }) => (
       
       <div>
         <p className="sidebar__social">
-        {data.datoCmsWork.gallery.map(({ fluid }) => (
+        {data.datoCmsWork.map(({ fluid }) => (
               <img alt={data.datoCmsWork.title} key={fluid.src} src={fluid.src} />
             ))}
           </p>
@@ -74,11 +74,6 @@ export const query = graphql`
       }
       title
       excerpt
-      gallery {
-        fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
-          src
-        }
-      }
       descriptionNode {
         childMarkdownRemark {
           html
