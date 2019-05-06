@@ -25,7 +25,7 @@ export default ({ data }) => (
           
           <a className="col col-1-3 thumb-link" href={project.link} id="itaca" title={project}>
           {JSON.stringify(project.logo)}
-            <img className="col-icn small" src={project.logo} alt={project.title} />
+            <img className="col-icn small" src={project.logo.url} alt={project.title} />
             <p>
               {project.description}
             </p>
