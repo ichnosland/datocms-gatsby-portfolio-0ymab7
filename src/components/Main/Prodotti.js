@@ -18,7 +18,7 @@ export default ({ data }) => (
       
       <div>
         <p className="sidebar__social">
-        {data.allDatoCmsProgetti.edges.map(({ node: project }) => (
+        {data.allDatoCmsProdotti.edges.map(({ node: project }) => (
           <p>{project.description}</p>
         ))}
         </p>
