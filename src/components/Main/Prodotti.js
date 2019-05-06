@@ -20,10 +20,11 @@ export default ({ data }) => (
       <div className="arrow-wrap small sm-only">
         <div className="outer-arrow small"></div>
       </div>
-      <div className="container row first">
+      <div className="container row row-wrap first">
         {data.allDatoCmsProdotti.edges.map(({ node: project }) => (
           
-          <a className="col col-1-3 thumb-link" href={project.link} id="itaca" title={project.title}>
+          <a className="col col-1-3 thumb-link" href={project.link} id="itaca" title={project}>
+            <img className="col-icn small" src={project.logo.src} alt={project.title} />
             <p>
               {project.description}
             </p>
