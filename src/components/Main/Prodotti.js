@@ -14,6 +14,22 @@ function Prodotti() {
           <div className="inner-arrow"></div>
         </div>
       </div>
+      
+      <div>
+      <p className="sidebar__social">
+            {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
+              <a
+                key={profile.profileType}
+                href={profile.url}
+                target="blank"
+                className={`social social--${profile.profileType.toLowerCase()}`}
+              > </a>
+            ))}
+          </p>
+      </div>
+      
+      
+      
       <h3>I nostri prodotti</h3>
       <div className="arrow-wrap small sm-only">
         <div className="outer-arrow small"></div>
