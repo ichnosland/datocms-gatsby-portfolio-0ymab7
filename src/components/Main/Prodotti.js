@@ -18,9 +18,7 @@ export default ({ data }) => (
       
       <div>
         <p className="sidebar__social">
-        {data.datoCmsWork.map(({ fluid }) => (
-              <img alt={data.datoCmsWork.title} key={fluid.src} src={fluid.src} />
-            ))}
+        {data.datoCmsWork}
           </p>
       </div>
       
