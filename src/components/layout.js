@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import tabletLogo from 'images/tablet-logo.png';
-import phoneLogo from 'images/phone-logo.png';
+import tabletLogo from '../images/tablet-logo.png';
+import phoneLogo from '../images/phone-logo.png';
 
 import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
