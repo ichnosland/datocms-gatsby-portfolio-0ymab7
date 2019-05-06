@@ -19,7 +19,7 @@ export default ({ data }) => (
       <div>
         <p className="sidebar__social">
         
-        {JSON.stringify(data.allDatoCmsWork)}
+        {JSON.stringify(data)}
           </p>
       </div>
       
