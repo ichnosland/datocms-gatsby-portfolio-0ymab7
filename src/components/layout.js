@@ -61,8 +61,7 @@ const TemplateWrapper = ({ children }) => (
             </div>
           </div>
         </section>
-        <Prodotti />
-        <Didattica />
+        
 
       {/*
        <div className="container__sidebar">
