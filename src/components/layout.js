@@ -63,10 +63,8 @@ const TemplateWrapper = ({ children }) => (
         </section>
         <Prodotti />
         <Didattica />
-        <RichiestaContatti
-          {...this.props.formContatti}
-        />
-       {/*
+
+      {/*
        <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
