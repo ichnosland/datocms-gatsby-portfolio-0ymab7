@@ -55,6 +55,14 @@ const TemplateWrapper = ({ children }) => (
           }
         }
       }
+      allDatoCmsDidattica {
+        edges {
+          node {
+            cover {url} 
+            description
+          }
+        }
+      }
     }
   `}
   render={data => (
@@ -63,17 +71,18 @@ const TemplateWrapper = ({ children }) => (
         favicon={data.datoCmsSite.faviconMetaTags}
         seo={data.datoCmsHome.seoMetaTags}
       />
-<Header />
-<section id="hero">
-          <div className="container">
-            <div id="logo">
-              <img src={tabletLogo} alt="Maieutical Labs" className="md-up-only" />
-              <img src={phoneLogo} alt="Maieutical Labs" className="sm-only" />
-            </div>
+      
+      <Header />
+      <section id="hero">
+        <div className="container">
+          <div id="logo">
+            <img src={tabletLogo} alt="Maieutical Labs" className="md-up-only" />
+            <img src={phoneLogo} alt="Maieutical Labs" className="sm-only" />
           </div>
-        </section>
-        <Prodotti data={data}/>
-        <Didattica />
+        </div>
+      </section>
+      <Prodotti data={data}/>
+      <Didattica data={data}/>
         
 
       {/*
