@@ -16,16 +16,6 @@ export default ({ data }) => (
         </div>
       </div>
       
-      <div>
-        <p className="sidebar__social">
-        {data.allDatoCmsProdotti.edges.map(({ node: project }) => (
-          <p>{project.description}</p>
-        ))}
-        </p>
-      </div>
-      
-      
-      
       <h3>I nostri prodotti</h3>
       <div className="arrow-wrap small sm-only">
         <div className="outer-arrow small"></div>
