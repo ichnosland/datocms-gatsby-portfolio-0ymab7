@@ -1,14 +1,9 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
 import Layout from '../components/layout';
-import Privacy from '../containers/Privacy';
-import Survey from '../containers/Survey';
-import Homepage from '../containers/HomePage';
-import NotFoundPage from '../containers/NotFoundPage/Loadable';
 import Footer from '../components/Footer';
 
 import injectSaga from '../utils/injectSaga';
@@ -54,12 +49,7 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
             }],
           }}
         />
-        <Switch>
-          <Route path="/" component={Homepage} />
-          <Route exact path="/privacy" component={Privacy} />
-          <Route exact path="/survey" component={Survey} />
-          <Route path="" component={NotFoundPage} />
-        </Switch>
+        
         <Footer />
       </div>
     );
