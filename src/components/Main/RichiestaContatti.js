@@ -131,7 +131,7 @@ RichiestaContatti.propTypes = {
   })).isRequired,
 };
 
-TemplateWrapper.propTypes = {
+RichiestaContatti.propTypes = {
   formContatti: PropTypes.shape({
     spinner: PropTypes.bool.isRequired,
     error_message: PropTypes.string.isRequired,
