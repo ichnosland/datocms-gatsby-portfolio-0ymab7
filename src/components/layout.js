@@ -74,10 +74,23 @@ const TemplateWrapper = ({ children }) => (
       </section>
       <Prodotti data={data}/>
       <Didattica data={data}/>
-      <RichiestaContatti/>
+      <RichiestaContatti
+          {...this.props.formContatti}
+        />
     </div>
     )}
   />
 )
+
+
+TemplateWrapper.propTypes = {
+  formContatti: PropTypes.shape({
+    spinner: PropTypes.bool.isRequired,
+    error_message: PropTypes.string.isRequired,
+    ruoli: PropTypes.arrayOf(PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    })).isRequired,
+  }).isRequired,}
 
 export default TemplateWrapper
