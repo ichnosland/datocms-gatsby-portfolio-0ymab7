@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import tabletLogo from '../images/tablet-logo.png';
 import phoneLogo from '../images/phone-logo.png';
