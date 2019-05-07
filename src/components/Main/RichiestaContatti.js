@@ -9,6 +9,16 @@ const errorValidator = (values) => ({
 });
 
 class RichiestaContatti extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.onSubmitForm = this.onSubmitForm.bind(this);
+  }
+
+  onSubmitForm(values) {
+    this.props.onSendTicket(values);
+  }
+
   render() {
     return (
       <section id="contatti">
