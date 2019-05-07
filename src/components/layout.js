@@ -74,7 +74,7 @@ const TemplateWrapper = ({ children }) => (
       </section>
       <Prodotti data={data}/>
       <Didattica data={data}/>
-      <RichiestaContatti {...props}/>
+      <RichiestaContatti {...formContatti}/>
     </div>
     )}
   />
