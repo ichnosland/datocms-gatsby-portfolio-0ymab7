@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-import HomePage from '../HomePage/Loadable';
 import Privacy from '../Privacy';
 import Survey from '../Survey';
 import NotFoundPage from '../NotFoundPage/Loadable';
@@ -46,7 +45,6 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
           }}
         />
       <Switch>
-        <Route exact path="/" component={HomePage} />
         <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/survey" component={Survey} />
         <Route path="" component={NotFoundPage} />
