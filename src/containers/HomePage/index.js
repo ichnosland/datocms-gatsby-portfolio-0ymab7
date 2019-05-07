@@ -84,4 +84,4 @@ const HomePage = compose(
   withConnect,
 )(HomePageView);
 
-export default HomePage;
+export default HomePageView;
