@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import injectSaga from 'utils/injectSaga';
-import Main from 'components/Main';
+import injectSaga from '../../utils/injectSaga';
+import Main from '../../components/Main';
 import { homepageSendTicketAction } from './actions';
 import { sagasHomepage } from './saga';
 
@@ -79,9 +79,9 @@ const mapStateToProps = (state) => ({
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 const withSaga = injectSaga({ key: 'homePage', saga: sagasHomepage });
 
-const HomePageView = compose(
+const HomePage = compose(
   withSaga,
   withConnect,
 )(HomePageView);
 
-export default HomePageView;
+export default HomePage;
