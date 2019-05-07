@@ -1,6 +1,6 @@
 {
   "name": "gatsby-datocms-demo",
-  "description": "Gatsby DatoCMS creative portfolio demo",
+  "description": " DatoCMS creative portfolio demo",
   "version": "1.0.0",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "lint-staged": {
@@ -166,7 +166,8 @@
   "dependencies": {
     "axios": "^0.17.0",
     "dotenv": "^7.0.0",
-    "gatsby": "2.3.29",
+    "gatsby": "^2.4.2",
+    "gatsby-cli": "^2.5.12",
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
@@ -208,8 +209,6 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   },
   "devDependencies": {
-    "prettier": "^1.17.0",
-    "shelljs": "0.7.7",
     "add-asset-html-webpack-plugin": "2.0.1",
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
@@ -254,9 +253,11 @@
     "offline-plugin": "4.8.1",
     "plop": "1.8.0",
     "pre-commit": "1.2.2",
+    "prettier": "^1.17.0",
     "react-test-renderer": "15.6.1",
     "rimraf": "2.6.1",
     "sass-loader": "^6.0.6",
+    "shelljs": "0.7.7",
     "style-loader": "0.18.1",
     "url-loader": "0.5.8",
     "webpack": "3.5.5",
