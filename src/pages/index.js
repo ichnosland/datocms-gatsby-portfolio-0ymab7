@@ -51,18 +51,7 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
   }
 }
 
-HomePageView.propTypes = {
-  onSendTicket: PropTypes.func.isRequired,
-  spinner: PropTypes.bool.isRequired,
-  error_message: PropTypes.string.isRequired,
-  confirm_message: PropTypes.string.isRequired,
-};
 
-HomePageView.defaultProps = {
-  spinner: false,
-  error_message: '',
-  confirm_message: '',
-};
 
 const mapDispatchToProps = (dispatch) => ({
   onSendTicket: (data) => {
@@ -85,3 +74,16 @@ const HomePageView = compose(
 )(HomePageView);
 
 export default HomePageView;
+
+HomePageView.propTypes = {
+  onSendTicket: PropTypes.func.isRequired,
+  spinner: PropTypes.bool.isRequired,
+  error_message: PropTypes.string.isRequired,
+  confirm_message: PropTypes.string.isRequired,
+};
+
+HomePageView.defaultProps = {
+  spinner: false,
+  error_message: '',
+  confirm_message: '',
+};
