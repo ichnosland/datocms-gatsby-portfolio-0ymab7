@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-import Privacy from '../Privacy';
-import Survey from '../Survey';
+import Privacy from '../containers/Privacy';
+import Survey from '../containers/Survey';
 import NotFoundPage from '../containers/NotFoundPage/Loadable';
 import Footer from '../components/Footer';
 
