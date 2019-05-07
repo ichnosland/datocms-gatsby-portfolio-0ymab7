@@ -13,7 +13,7 @@ import Didattica from './Main/Didattica';
 import RichiestaContatti from './Main/RichiestaContatti';
 import '../styles/index.sass'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ formContatti }) => (
   <StaticQuery query={graphql`
     query LayoutQuery
     {
@@ -79,30 +79,5 @@ const TemplateWrapper = ({ children }) => (
     )}
   />
 )
-const formContatti = {
-  onSubmitForm: this.onSubmitForm,
-  spinner: this.props.spinner,
-  error_message: this.props.error_message,
-  confirm_message: this.props.confirm_message,
-  ruoli: [{
-    key: 'docente',
-    value: 'Docente',
-  }, {
-    key: 'studente',
-    value: 'Studente',
-  }, {
-    key: 'amministrativo',
-    value: 'Amministrativo',
-  }, {
-    key: 'genitore',
-    value: 'Genitore',
-  }, {
-    key: 'altro',
-    value: 'Altro',
-  }],
-};
 
 export default TemplateWrapper
-
-
-
