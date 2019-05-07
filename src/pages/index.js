@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
-import Layout from 'components/Layout';
+import Layout from 'components/layout';
 import { homepageSendTicketAction } from 'containers/HomePage/actions';
 import { sagasHomepage } from 'containers/HomePage/saga';
 
