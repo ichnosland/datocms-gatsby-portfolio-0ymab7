@@ -5,8 +5,8 @@ import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
 import Layout from 'components/Layout';
-import { homepageSendTicketAction } from 'components/HomePage/actions';
-import { sagasHomepage } from 'components/HomePage/saga';
+import { homepageSendTicketAction } from 'containers/HomePage/actions';
+import { sagasHomepage } from 'containers/HomePage/saga';
 
 export class IndexPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
