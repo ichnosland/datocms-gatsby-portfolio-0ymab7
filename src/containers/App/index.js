@@ -27,6 +27,7 @@ export default function App() {
         <meta name="description" content="Maieutical Labs è un centro di ricerca privato sulla didattica online e l'e-learning" />
       </Helmet>
       <Switch>
+        <Route exact path="/" component={HomePage} />
         <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/survey" component={Survey} />
         <Route path="" component={NotFoundPage} />
