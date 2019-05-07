@@ -205,7 +205,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop"
   },
   "devDependencies": {
     "add-asset-html-webpack-plugin": "2.0.1",
