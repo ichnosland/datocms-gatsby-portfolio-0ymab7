@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
-import { CICERO_ACADEMY_BASE_URL } from 'App/constants';
+import { CICERO_ACADEMY_BASE_URL } from '../App/constants';
 import { HOMEPAGE_SEND_TICKET, HOMEPAGE_URI_ZENDESK } from './constants';
 import {
   homepageSendTicketErrorAction,
