@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import injectSaga from '../utils/injectSaga';
-import Layout from '../components/layout';
-import { homepageSendTicketAction } from '../containers/HomePage/actions';
-import { sagasHomepage } from '../containers/HomePage/saga';
+import injectSaga from 'utils/injectSaga';
+import Main from 'components/Main';
+import { homepageSendTicketAction } from './actions';
+import { sagasHomepage } from './saga';
 
-export class IndexPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class HomePageView extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
 
@@ -22,7 +22,7 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
   render() {
     return (
       <div>
-        <Layout
+        <Main
           formContatti={{
             onSubmitForm: this.onSubmitForm,
             spinner: this.props.spinner,
@@ -50,8 +50,6 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
     );
   }
 }
-
-
 
 HomePageView.propTypes = {
   onSendTicket: PropTypes.func.isRequired,
@@ -81,11 +79,9 @@ const mapStateToProps = (state) => ({
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 const withSaga = injectSaga({ key: 'homePage', saga: sagasHomepage });
 
-const HomePage = compose(
+const HomePageView = compose(
   withSaga,
   withConnect,
 )(HomePageView);
 
-export default HomePage;
-
-
+export default HomePageView;
