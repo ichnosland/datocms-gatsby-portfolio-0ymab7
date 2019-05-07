@@ -74,8 +74,8 @@ const TemplateWrapper = ({ children }) => (
       </section>
       <Prodotti data={data}/>
       <Didattica data={data}/>
+      {JSON.stringify(...this)}
       <RichiestaContatti
-          {...this.props.formContatti}
         />
     </div>
     )}
