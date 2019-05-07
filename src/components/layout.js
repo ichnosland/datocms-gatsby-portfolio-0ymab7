@@ -75,9 +75,7 @@ const TemplateWrapper = ({ children }) => (
       <Prodotti data={data}/>
       <Didattica data={data}/>
       {JSON.stringify(...this)}
-      <RichiestaContatti
-        />
-    </div>
+     </div>
     )}
   />
 )
