@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import injectSaga from 'utils/injectSaga';
-import Main from 'components/Main';
-import { homepageSendTicketAction } from './actions';
-import { sagasHomepage } from './saga';
+import injectSaga from '../utils/injectSaga';
+import Layout from '../components/layout';
+import { homepageSendTicketAction } from '../containers/HomePage/actions';
+import { sagasHomepage } from '../containers/HomePage/saga';
 
-export class HomePageView extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class IndexPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
 
@@ -22,7 +22,7 @@ export class HomePageView extends React.PureComponent { // eslint-disable-line r
   render() {
     return (
       <div>
-        <Main
+        <Layout
           formContatti={{
             onSubmitForm: this.onSubmitForm,
             spinner: this.props.spinner,
@@ -51,37 +51,5 @@ export class HomePageView extends React.PureComponent { // eslint-disable-line r
   }
 }
 
-HomePageView.propTypes = {
-  onSendTicket: PropTypes.func.isRequired,
-  spinner: PropTypes.bool.isRequired,
-  error_message: PropTypes.string.isRequired,
-  confirm_message: PropTypes.string.isRequired,
-};
+export default IndexPage;
 
-HomePageView.defaultProps = {
-  spinner: false,
-  error_message: '',
-  confirm_message: '',
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  onSendTicket: (data) => {
-    dispatch(homepageSendTicketAction(data));
-  },
-});
-
-const mapStateToProps = (state) => ({
-  spinner: state.get('homePage').spinner,
-  error_message: state.get('homePage').error_message,
-  confirm_message: state.get('homePage').confirm_message,
-});
-
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
-const withSaga = injectSaga({ key: 'homePage', saga: sagasHomepage });
-
-const HomePageView = compose(
-  withSaga,
-  withConnect,
-)(HomePageView);
-
-export default HomePageView;
