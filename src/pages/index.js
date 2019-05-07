@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 import Privacy from '../Privacy';
 import Survey from '../Survey';
-import NotFoundPage from '../NotFoundPage/Loadable';
+import NotFoundPage from '../containers/NotFoundPage/Loadable';
 import Footer from '../components/Footer';
 
 export class IndexPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
