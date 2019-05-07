@@ -74,7 +74,28 @@ const TemplateWrapper = ({ children }) => (
       </section>
       <Prodotti data={data}/>
       <Didattica data={data}/>
-      <RichiestaContatti {...formContatti}/>
+      <RichiestaContatti formContatti={{
+            onSubmitForm: this.onSubmitForm,
+            spinner: this.props.spinner,
+            error_message: this.props.error_message,
+            confirm_message: this.props.confirm_message,
+            ruoli: [{
+              key: 'docente',
+              value: 'Docente',
+            }, {
+              key: 'studente',
+              value: 'Studente',
+            }, {
+              key: 'amministrativo',
+              value: 'Amministrativo',
+            }, {
+              key: 'genitore',
+              value: 'Genitore',
+            }, {
+              key: 'altro',
+              value: 'Altro',
+            }],
+          }}/>
     </div>
     )}
   />
