@@ -79,7 +79,7 @@ const TemplateWrapper = ({ children }) => (
     )}
   />
 )
-const formContatti ={
+const formContatti = {
   onSubmitForm: this.onSubmitForm,
   spinner: this.props.spinner,
   error_message: this.props.error_message,
@@ -101,15 +101,6 @@ const formContatti ={
     value: 'Altro',
   }],
 };
-
-const  formContatti = PropTypes.shape({
-    spinner: PropTypes.bool.isRequired,
-    error_message: PropTypes.string.isRequired,
-    ruoli: PropTypes.arrayOf(PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-    })).isRequired,
-  }).isRequired
 
 export default TemplateWrapper
 
