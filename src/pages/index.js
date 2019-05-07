@@ -85,9 +85,6 @@ const mapStateToProps = (state) => ({
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 const withSaga = injectSaga({ key: 'homePage', saga: sagasHomepage });
 
-const HomePage = compose(
-  withSaga,
-  withConnect,
-)(HomePage);
+
 
 export default HomePage;
