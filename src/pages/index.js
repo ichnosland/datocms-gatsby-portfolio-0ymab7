@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-
-import injectSaga from '../utils/injectSaga';
 import Layout from '../components/layout';
-import { homepageSendTicketAction } from '../containers/HomePage/actions';
-import { sagasHomepage } from '../containers/HomePage/saga';
+
+import HomePage from '../HomePage/Loadable';
+import Privacy from '../Privacy';
+import Survey from '../Survey';
+import NotFoundPage from '../NotFoundPage/Loadable';
+import Footer from '../components/Footer';
 
 export class IndexPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -46,7 +45,15 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
             }],
           }}
         />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/privacy" component={Privacy} />
+        <Route exact path="/survey" component={Survey} />
+        <Route path="" component={NotFoundPage} />
+      </Switch>
+      <Footer />
       </div>
+      
     );
   }
 }
