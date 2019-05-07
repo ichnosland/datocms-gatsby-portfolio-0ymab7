@@ -53,6 +53,19 @@ export class IndexPage extends React.PureComponent { // eslint-disable-line reac
 
 
 
+HomePageView.propTypes = {
+  onSendTicket: PropTypes.func.isRequired,
+  spinner: PropTypes.bool.isRequired,
+  error_message: PropTypes.string.isRequired,
+  confirm_message: PropTypes.string.isRequired,
+};
+
+HomePageView.defaultProps = {
+  spinner: false,
+  error_message: '',
+  confirm_message: '',
+};
+
 const mapDispatchToProps = (dispatch) => ({
   onSendTicket: (data) => {
     dispatch(homepageSendTicketAction(data));
@@ -68,22 +81,11 @@ const mapStateToProps = (state) => ({
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 const withSaga = injectSaga({ key: 'homePage', saga: sagasHomepage });
 
-const HomePageView = compose(
+const HomePage = compose(
   withSaga,
   withConnect,
 )(HomePageView);
 
-export default HomePageView;
+export default HomePage;
 
-HomePageView.propTypes = {
-  onSendTicket: PropTypes.func.isRequired,
-  spinner: PropTypes.bool.isRequired,
-  error_message: PropTypes.string.isRequired,
-  confirm_message: PropTypes.string.isRequired,
-};
 
-HomePageView.defaultProps = {
-  spinner: false,
-  error_message: '',
-  confirm_message: '',
-};
