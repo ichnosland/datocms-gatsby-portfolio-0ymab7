@@ -16,7 +16,6 @@ import Survey from '../Survey';
 import NotFoundPage from '../NotFoundPage/Loadable';
 import Footer from '../../components/Footer';
 
-
 export default function App() {
   return (
     <div>
