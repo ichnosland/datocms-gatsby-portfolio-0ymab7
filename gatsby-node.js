@@ -5,6 +5,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
     createPage({
       path: `/`,
-      component: path.resolve(`./src/components/Main/index.js`)
+      component: path.resolve(`./src/containers/HomePage/index.js`)
     }); 
 }
