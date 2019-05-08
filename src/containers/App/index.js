@@ -10,11 +10,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
-import Privacy from 'containers/Privacy';
-import Survey from 'containers/Survey';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Footer from 'components/Footer';
+import HomePage from '../HomePage/Loadable';
+import Privacy from '../Privacy';
+import Survey from '../Survey';
+import NotFoundPage from '../NotFoundPage/Loadable';
+import Footer from '../../components/Footer';
 
 
 export default function App() {
