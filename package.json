@@ -83,8 +83,7 @@
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -240,7 +239,6 @@
     "babel-preset-env": "1.5.1",
     "babel-preset-react": "6.24.1",
     "circular-dependency-plugin": "3.0.0",
-    "coveralls": "2.13.1",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-airbnb-base": "11.2.0",
@@ -258,6 +256,7 @@
     "offline-plugin": "4.8.1",
     "plop": "1.8.0",
     "pre-commit": "1.2.2",
+    "react-test-renderer": "15.6.1",
     "rimraf": "2.6.1",
     "webpack": "3.5.5",
     "webpack-dev-middleware": "1.11.0",
