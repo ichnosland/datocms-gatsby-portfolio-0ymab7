@@ -2,6 +2,7 @@
 exports.createPages = () => {
   return new Promise((resolve, reject) => {
     // do async work
+    console.log('create pages in gatsby node');
   })
 }
 

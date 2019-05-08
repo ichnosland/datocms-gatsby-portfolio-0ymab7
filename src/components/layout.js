@@ -16,14 +16,7 @@ const TemplateWrapper = ({ formContatti }) => (
   <StaticQuery query={graphql`
     query LayoutQuery
     {
-      datoCmsSite {
-        globalSeo {
-          siteName
-        }
-        faviconMetaTags {
-          ...GatsbyDatoCmsFaviconMetaTags
-        }
-      }
+      
       datoCmsHome {
         seoMetaTags {
           ...GatsbyDatoCmsSeoMetaTags
