@@ -1,86 +1,93 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
-import { StaticQuery, graphql } from 'gatsby';
-import { HelmetDatoCms } from 'gatsby-source-datocms';
+import Layout from '../components/layout';
+import Footer from '../components/Footer';
 
-import tabletLogo from '../images/tablet-logo.png';
-import phoneLogo from '../images/phone-logo.png';
-import Header from '../components/Header';
-import Prodotti from '../components/Main/Prodotti';
-import Didattica from '../components/Main/Didattica';
-import RichiestaContatti from '../components/Main/RichiestaContatti';
-import '../styles/index.sass';
+import injectSaga from '../utils/injectSaga';
+import { sagasHomepage } from '../containers/HomePage/saga';
+import { homepageSendTicketAction } from '../containers/HomePage/actions';
 
-const TemplateWrapper = ({ formContatti }) => {
-  return (<StaticQuery query={graphql`
-      query LayoutQuery
-      {
-        datoCmsSite {
-          globalSeo {
-            siteName
-          }
-          faviconMetaTags {
-            ...GatsbyDatoCmsFaviconMetaTags
-          }
-        }
-        datoCmsHome {
-          seoMetaTags {
-            ...GatsbyDatoCmsSeoMetaTags
-          }
-          introTextNode {
-            childMarkdownRemark {
-              html
-            }
-          }
-          copyright
-        }
-        allDatoCmsProdotti {
-          edges {
-            node {
-              logo {url} 
-              title
-              description
-              link
-            }
-          }
-        }
-        allDatoCmsDidattica {
-          edges {
-            node {
-              cover {url} 
-              description
-            }
-          }
-        }
-      }
-  `} render={data => (<div>
-      <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags} />
+export class IndexPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
-      <Header />
-      <section id="hero">
-        <div className="container">
-          <div id="logo">
-            <img src={tabletLogo} alt="Maieutical Labs" className="md-up-only" />
-            <img src={phoneLogo} alt="Maieutical Labs" className="sm-only" />
-          </div>
-        </div>
-      </section>
-      <Prodotti data={data} />
-      <Didattica data={data} />
-      <RichiestaContatti {...formContatti} />
-    </div>)} />);
+  constructor(props) {
+    super(props);
+
+    this.onSubmitForm = this.onSubmitForm.bind(this);
+  }
+
+  onSubmitForm(values) {
+    this.props.onSendTicket(values);
+  }
+
+  render() {
+    return (
+      <div>
+        <Layout
+          formContatti={{
+            onSubmitForm: this.onSubmitForm,
+            spinner: this.props.spinner,
+            error_message: this.props.error_message,
+            confirm_message: this.props.confirm_message,
+            ruoli: [{
+              key: 'docente',
+              value: 'Docente',
+            }, {
+              key: 'studente',
+              value: 'Studente',
+            }, {
+              key: 'amministrativo',
+              value: 'Amministrativo',
+            }, {
+              key: 'genitore',
+              value: 'Genitore',
+            }, {
+              key: 'altro',
+              value: 'Altro',
+            }],
+          }}
+        />
+        
+        <Footer />
+      </div>
+    );
+  }
 }
 
-TemplateWrapper.propTypes = {
-  formContatti: PropTypes.shape({
-    spinner: PropTypes.bool.isRequired,
-    error_message: PropTypes.string.isRequired,
-    ruoli: PropTypes.arrayOf(PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-    })).isRequired,
-  }).isRequired,
+
+IndexPage.propTypes = {
+  onSendTicket: PropTypes.func.isRequired,
+  spinner: PropTypes.bool.isRequired,
+  error_message: PropTypes.string.isRequired,
+  confirm_message: PropTypes.string.isRequired,
 };
 
-export default TemplateWrapper
+IndexPage.defaultProps = {
+  spinner: false,
+  error_message: '',
+  confirm_message: '',
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  onSendTicket: (data) => {
+    dispatch(homepageSendTicketAction(data));
+  },
+});
+
+const mapStateToProps = (state) => ({
+  spinner: state.get('homePage').spinner,
+  error_message: state.get('homePage').error_message,
+  confirm_message: state.get('homePage').confirm_message,
+});
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+const withSaga = injectSaga({ key: 'homePage', saga: sagasHomepage });
+
+const HomePage = compose(
+  withSaga,
+  withConnect,
+)(IndexPage);
+
+export default HomePage;
