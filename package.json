@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-datocms-demo",
-  "description": " DatoCMS creative portfolio demo",
+  "name": "maieutical",
   "version": "1.0.0",
-  "author": "Stefano Verna <s.verna@datocms.com>",
+  "description": "sito web istituzionale maieutical labs",
+  "main": "index.js",
+  "author": "maieutical labs",
   "dependencies": {
     "axios": "^0.17.0",
     "dotenv": "^7.0.0",
@@ -42,7 +43,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
