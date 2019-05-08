@@ -9,7 +9,6 @@ import phoneLogo from '../images/phone-logo.png';
 import Header from '../components/Header';
 import Prodotti from '../components/Main/Prodotti';
 import Didattica from '../components/Main/Didattica';
-
 import RichiestaContatti from '../components/Main/RichiestaContatti';
 import '../styles/index.sass';
 
