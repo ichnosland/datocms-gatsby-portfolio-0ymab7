@@ -8,11 +8,6 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Switch, Route } from 'react-router-dom';
-
-import HomePage from '../HomePage/Loadable';
-import Privacy from '../Privacy';
-import Survey from '../Survey';
 import Footer from '../../components/Footer';
 
 export default function App() {
@@ -24,11 +19,6 @@ export default function App() {
       >
         <meta name="description" content="Maieutical Labs è un centro di ricerca privato sulla didattica online e l'e-learning" />
       </Helmet>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/privacy" component={Privacy} />
-        <Route exact path="/survey" component={Survey} />
-      </Switch>
       <Footer />
     </div>
   );
