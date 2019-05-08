@@ -1,13 +1,6 @@
-// Promise API
-exports.createPages = () => {
-  return new Promise((resolve, reject) => {
-    // do async work
-    console.log('create pages in gatsby node');
-  })
-}
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// Callback API
-exports.createPages = (_, pluginOptions, cb) => {
-  // do Async work
-  cb()
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 }
