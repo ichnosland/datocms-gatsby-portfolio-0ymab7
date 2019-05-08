@@ -73,7 +73,6 @@ const TemplateWrapper = ({ formContatti }) => (
       </section>
       <Prodotti data={data}/>
       <Didattica data={data}/>
-      <RichiestaContatti {...formContatti}/>
     </div>
     )}
   />
