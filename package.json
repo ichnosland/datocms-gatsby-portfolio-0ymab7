@@ -85,11 +85,7 @@
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "url-loader": "0.5.8",
-    "webpack": "3.5.5",
-    "webpack-dev-middleware": "1.11.0",
-    "webpack-hot-middleware": "2.18.0"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -266,6 +262,9 @@
     "plop": "1.8.0",
     "pre-commit": "1.2.2",
     "react-test-renderer": "15.6.1",
-    "rimraf": "2.6.1"
+    "rimraf": "2.6.1",
+    "webpack": "3.5.5",
+    "webpack-dev-middleware": "1.11.0",
+    "webpack-hot-middleware": "2.18.0"
     }
 }
