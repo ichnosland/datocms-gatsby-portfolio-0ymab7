@@ -10,6 +10,10 @@ import Didattica from './Didattica';
 import Prodotti from './Prodotti';
 
 class Main extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
@@ -22,10 +26,10 @@ class Main extends React.PureComponent { // eslint-disable-line react/prefer-sta
             </div>
           </div>
         </section>
-        <Prodotti />
-        <Didattica />
+        <Prodotti data={this.props.data} />
+        <Didattica data={this.props.data} />
         <RichiestaContatti
-          {...formContatti}
+          formContatti = {this.props.formContatti}
         />
       </div>
     );

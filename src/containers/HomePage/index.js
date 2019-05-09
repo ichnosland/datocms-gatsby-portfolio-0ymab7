@@ -22,7 +22,9 @@ export class HomePageView extends React.PureComponent { // eslint-disable-line r
   render() {
     return (
       <div>
-        <Main
+        <Main 
+          data={this.props.data}
+          
           formContatti={{
             onSubmitForm: this.onSubmitForm,
             spinner: this.props.spinner,

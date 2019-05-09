@@ -87,7 +87,7 @@ class RichiestaContatti extends React.PureComponent {
                       placeholder="Ruolo"
                       className="input-field select"
                       aria-label="Ruolo"
-                      options={this.props.ruoli.map(
+                      options={this.props.formContatti.ruoli.map(
                         (ruolo) => ({
                           label: ruolo.key,
                           value: ruolo.key,

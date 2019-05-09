@@ -9,8 +9,8 @@ import phoneLogo from '../images/phone-logo.png';
 import Header from './Header';
 import Prodotti from './Main/Prodotti';
 import Didattica from './Main/Didattica';
-
 import RichiestaContatti from './Main/RichiestaContatti';
+import HomePage from '../containers/HomePage'
 import '../styles/index.sass';
 
 const TemplateWrapper = ({ formContatti }) => {
@@ -57,19 +57,7 @@ const TemplateWrapper = ({ formContatti }) => {
       }
   `} render={data => (<div>
       <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags} />
-
-      <Header />
-      <section id="hero">
-        <div className="container">
-          <div id="logo">
-            <img src={tabletLogo} alt="Maieutical Labs" className="md-up-only" />
-            <img src={phoneLogo} alt="Maieutical Labs" className="sm-only" />
-          </div>
-        </div>
-      </section>
-      <Prodotti data={data} />
-      <Didattica data={data} />
-      <RichiestaContatti {...formContatti} />
+     <HomePage data = {data}></HomePage>
     </div>)} />);
 }
 

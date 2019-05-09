@@ -10,7 +10,7 @@ export const defaultState = {
   confirm_message: '',
 };
 
-function homeReducer(state = defaultState, action) {
+function homePageReducer(state = defaultState, action) {
   switch (action.type) {
     case HOMEPAGE_SEND_TICKET_SUCCESS:
       return {
@@ -38,4 +38,4 @@ function homeReducer(state = defaultState, action) {
   }
 }
 
-export default homeReducer;
+export default homePageReducer;

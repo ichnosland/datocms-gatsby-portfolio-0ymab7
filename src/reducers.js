@@ -6,7 +6,7 @@ import { fromJS } from 'immutable';
 import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
-import homePageReducer from 'containers/HomePage/reducer';
+import homePageReducer from './containers/HomePage/reducer';
 
 /*
  * routeReducer

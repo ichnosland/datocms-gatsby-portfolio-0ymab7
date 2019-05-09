@@ -32,7 +32,7 @@ shell.rm('-rf', 'app/translations')
 shell.mv('internals/templates/translations', 'app');
 
 // Handle utils/
-shell.rm('-rf', 'app/utils');
+shell.rm('-rf', 'src/utils');
 shell.mv('internals/templates/utils', 'app')
 
 // Replace the files in the root app/ folder
