@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from "gatsby"
-import Header from '../../components/Header';
 
 export class Privacy extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

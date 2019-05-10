@@ -10,9 +10,6 @@ import Didattica from './Didattica';
 import Prodotti from './Prodotti';
 
 class Main extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

@@ -13,11 +13,13 @@ export default ({ element }) => {
 
   // Create redux store with history
     const initialState = {};
+
+    const context = {};
     const history = createMemoryHistory();
     const store = configureStore(initialState, history);
 
   return <Provider store={store} >
-      <StaticRouter>
+      <StaticRouter context={context}>
         {element}
       </StaticRouter>
           </Provider>

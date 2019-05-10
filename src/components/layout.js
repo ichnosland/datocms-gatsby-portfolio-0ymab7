@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { StaticQuery, graphql } from 'gatsby';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import HomePage from '../containers/HomePage'
 import '../styles/index.sass';
 
-const TemplateWrapper = ({ formContatti }) => {
+const TemplateWrapper = () => {
   return (<StaticQuery query={graphql`
       query LayoutQuery
       {
@@ -53,16 +52,5 @@ const TemplateWrapper = ({ formContatti }) => {
      <HomePage data = {data}></HomePage>
     </div>)} />);
 }
-
-TemplateWrapper.propTypes = {
-  formContatti: PropTypes.shape({
-    spinner: PropTypes.bool.isRequired,
-    error_message: PropTypes.string.isRequired,
-    ruoli: PropTypes.arrayOf(PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-    })).isRequired,
-  }).isRequired,
-};
 
 export default TemplateWrapper
