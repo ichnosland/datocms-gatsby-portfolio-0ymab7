@@ -1,7 +1,6 @@
 import React from "react"
 import { Provider } from "react-redux"
 import { createMemoryHistory } from 'history';
-import {App} from './src/containers/App';
 import { StaticRouter } from 'react-router'
 
 import configureStore from './src/configureStore';
