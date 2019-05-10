@@ -80,7 +80,7 @@ class RichiestaContatti extends React.PureComponent {
                       placeholder="Ruolo"
                       className="input-field select"
                       aria-label="Ruolo"
-                      options={this.props.formContatti.ruoli.map(
+                      options={this.props.ruoli.map(
                         (ruolo) => ({
                           label: ruolo.key,
                           value: ruolo.key,
@@ -123,3 +123,13 @@ class RichiestaContatti extends React.PureComponent {
 
 export default RichiestaContatti;
 
+RichiestaContatti.propTypes = {
+  spinner: PropTypes.bool.isRequired,
+  error_message: PropTypes.string.isRequired,
+  confirm_message: PropTypes.string.isRequired,
+  onSubmitForm: PropTypes.func.isRequired,
+  ruoli: PropTypes.arrayOf(PropTypes.shape({
+    key: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+  })).isRequired,
+};
