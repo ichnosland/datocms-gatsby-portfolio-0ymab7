@@ -5,15 +5,25 @@
  */
 
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { HelmetDatoCms } from 'gatsby-source-datocms';
 import Footer from '../components/Footer';
 import Privacy from "../containers/Privacy"
 
 
-const PrivacyPage = ({ data }) => (
-  <div>
-      <Privacy />
+const PrivacyPage = ({ formContatti }) => {
+    return (<StaticQuery query={graphql`
+    {
+        datoCmsPrivacyPage {
+        contenuto
+        titolo
+      }
+    }
+  `} render={data => (<div>
+      <Privacy data={data.datoCmsPrivacyPage}/>
     <Footer />
-  </div>
-)
+    </div>)} />);
+}
+
 
 export default PrivacyPage
