@@ -12,8 +12,8 @@ export default ({ data }) => (
       </section>
       <section>
         <div className="container row">
-        {data.allDatoCmsDidattica.edges.map(({ node: didattica }) => (          
-          <div className="col col-1-2">
+        {data.allDatoCmsDidattica.edges.map(({ node: didattica , index }) => (          
+          <div className="col col-1-2" key={index}>
             <img src={didattica.cover.url} className="col-icn" alt="" />
             <p>{didattica.description}</p>
           </div>

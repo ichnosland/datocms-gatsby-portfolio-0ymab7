@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { Form, Text, Select, TextArea, Checkbox } from 'react-form';
 import isEmail from 'validator/lib/isEmail';
 import LoadingIndicator from '../LoadingIndicator';
@@ -9,15 +10,7 @@ const errorValidator = (values) => ({
 });
 
 class RichiestaContatti extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.onSubmitForm = this.onSubmitForm.bind(this);
-  }
-
-  onSubmitForm(values) {
-    this.props.onSendTicket(values);
-  }
+  
 
   render() {
     return (
@@ -129,16 +122,4 @@ class RichiestaContatti extends React.PureComponent {
 }
 
 export default RichiestaContatti;
-
-RichiestaContatti.propTypes = {
-  spinner: PropTypes.bool.isRequired,
-  error_message: PropTypes.string.isRequired,
-  confirm_message: PropTypes.string.isRequired,
-  onSubmitForm: PropTypes.func.isRequired,
-  ruoli: PropTypes.arrayOf(PropTypes.shape({
-    key: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-  })).isRequired,
-};
-
 
