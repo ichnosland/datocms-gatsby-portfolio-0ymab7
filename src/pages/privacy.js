@@ -9,6 +9,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import Footer from '../components/Footer';
 import Privacy from "../containers/Privacy"
+import '../styles/index.sass';
 
 
 const PrivacyPage = ({ formContatti }) => {

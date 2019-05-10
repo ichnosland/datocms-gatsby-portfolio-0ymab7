@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "gatsby"
+import Header from '../../components/Header';
 
 export class Privacy extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -9,6 +10,7 @@ export class Privacy extends React.PureComponent { // eslint-disable-line react/
   render() {
     return (
       <div>
+
         <header>
           <div className="container">
             <h1 className="seo"><Link to="/"><span>Maieutical Labs</span></Link></h1>
