@@ -14,7 +14,6 @@ import HomePage from '../HomePage';
 import Privacy from '../Privacy';
 import Survey from '../Survey';
 import NotFound from '../NotFoundPage';
-import Footer from '../../components/Footer';
 
 export default function App() {
   return (
@@ -33,7 +32,6 @@ export default function App() {
           <Route path="" component={NotFound} />
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }

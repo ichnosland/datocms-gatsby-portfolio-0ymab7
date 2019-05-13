@@ -5,10 +5,8 @@ import { HelmetDatoCms } from 'gatsby-source-datocms';
 import HomePage from '../containers/HomePage';
 import '../styles/index.sass';
 
-const TemplateWrapper = function layout() {
-  return (
-    <StaticQuery
-      query={graphql`
+const TemplateWrapper = () => (<StaticQuery
+  query={graphql`
       query LayoutQuery
       {
         datoCmsSite {
@@ -48,13 +46,10 @@ const TemplateWrapper = function layout() {
         }
       }
   `}
-      render={(data) => (
-        <div>
-          <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags} />
-          <HomePage data={data}></HomePage>
-        </div>
-    )}
-    />);
-};
+  render={(data) => (<div>
+    <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags} />
+    <HomePage data={data}></HomePage>
+  </div>)}
+/>);
 
 export default TemplateWrapper;

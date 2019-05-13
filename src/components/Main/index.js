@@ -36,7 +36,7 @@ class Main extends React.PureComponent { // eslint-disable-line react/prefer-sta
 }
 
 Main.propTypes = {
-  data: PropTypes,
+  data: PropTypes.object,
   formContatti: PropTypes.shape({
     spinner: PropTypes.bool.isRequired,
     error_message: PropTypes.string.isRequired,

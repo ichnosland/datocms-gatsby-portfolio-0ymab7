@@ -53,7 +53,7 @@ export class HomePageView extends React.PureComponent { // eslint-disable-line r
 }
 
 HomePageView.propTypes = {
-  data: PropTypes,
+  data: PropTypes.object,
   onSendTicket: PropTypes.func.isRequired,
   spinner: PropTypes.bool.isRequired,
   error_message: PropTypes.string.isRequired,

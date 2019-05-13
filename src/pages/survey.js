@@ -7,23 +7,34 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Footer from '../components/Footer';
-import Survey from "../containers/Survey"
+import Survey from '../containers/Survey';
 import '../styles/index.sass';
 
 
-const SurveyPage = ({ formContatti }) => {
-    return (<StaticQuery query={graphql`
+const SurveyPage = () => (
+  <StaticQuery
+    query={graphql`
     {
-        datoCmsSurveyPage {
+      datoCmsSurveyPage {
         contenuto
         titolo
       }
+      datoCmsHome {
+        seoMetaTags {
+          ...GatsbyDatoCmsSeoMetaTags
+        }
+        copyright
+        footer
+        cookieBanner
+      }
     }
-  `} render={data => (<div>
-      <Survey data={data.datoCmsPSurveyPage}/>
-    <Footer />
-    </div>)} />);
-}
+  `}
+    render={
+      (data) => (<div>
+        <Survey data={data.datoCmsPSurveyPage} />
+        <Footer data={data} />
+      </div>)}
+  />);
 
 
-export default SurveyPage
+export default SurveyPage;
