@@ -8,6 +8,7 @@ import Header from '../Header';
 import RichiestaContatti from './RichiestaContatti';
 import Didattica from './Didattica';
 import Prodotti from './Prodotti';
+import Footer from '../../components/Footer';
 
 class Main extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
@@ -28,6 +29,7 @@ class Main extends React.PureComponent { // eslint-disable-line react/prefer-sta
         <RichiestaContatti
           {...this.props.formContatti}
         />
+        <Footer data={this.props.data}/>
       </div>
     );
   }

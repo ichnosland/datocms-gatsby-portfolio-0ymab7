@@ -21,7 +21,7 @@ const TemplateWrapper = () => {
           seoMetaTags {
             ...GatsbyDatoCmsSeoMetaTags
           }
-          introTextNode {
+          footerInfoNode {
             childMarkdownRemark {
               html
             }

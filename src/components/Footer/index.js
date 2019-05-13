@@ -1,12 +1,16 @@
 import React from 'react';
+import CookieConsent from "react-cookie-consent";
 
-function Footer() {
+function Footer({ data }) {
   return (
     <footer>
-      <p>&copy; 2018 - Maieutical Labs, srl • CF e P. IVA 10623350013</p>
-      <p className="mini-p">Sede legale: via Regis 26, 10064 Pinerolo (TO). PEC: maieuticallabs@legalmail.it<br />Iscritti al Registro delle Imprese di Torino; REA: TO - 1149034; Capitale in bilancio: € 11.000.</p>
+      <p>{data.datoCmsHome.copyright}</p>
+      <p className="mini-p">{data.datoCmsHome.footerInfo}</p>
+      <CookieConsent>
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
     </footer>
   );
-}
+} 
 
 export default Footer;

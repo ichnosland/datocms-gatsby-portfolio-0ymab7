@@ -22,7 +22,6 @@ const IndexPage = ({ data }) => (
         <meta name="description" content="Maieutical Labs è un centro di ricerca privato sulla didattica online e l'e-learning" />
       </Helmet>
     </Layout>
-    <Footer />
   </div>
 )
 
