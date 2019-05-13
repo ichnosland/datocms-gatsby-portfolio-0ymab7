@@ -5,7 +5,7 @@ import { HelmetDatoCms } from 'gatsby-source-datocms';
 import HomePage from '../containers/HomePage';
 import '../styles/index.sass';
 
-const TemplateWrapper = function render() {
+const TemplateWrapper = function layout() {
   return (
     <StaticQuery
       query={graphql`

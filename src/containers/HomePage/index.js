@@ -22,9 +22,8 @@ export class HomePageView extends React.PureComponent { // eslint-disable-line r
   render() {
     return (
       <div>
-        <Main 
+        <Main
           data={this.props.data}
-          
           formContatti={{
             onSubmitForm: this.onSubmitForm,
             spinner: this.props.spinner,
@@ -54,6 +53,7 @@ export class HomePageView extends React.PureComponent { // eslint-disable-line r
 }
 
 HomePageView.propTypes = {
+  data: PropTypes,
   onSendTicket: PropTypes.func.isRequired,
   spinner: PropTypes.bool.isRequired,
   error_message: PropTypes.string.isRequired,
