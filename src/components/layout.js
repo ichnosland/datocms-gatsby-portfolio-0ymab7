@@ -21,11 +21,6 @@ const TemplateWrapper = () => {
           seoMetaTags {
             ...GatsbyDatoCmsSeoMetaTags
           }
-          footerInfoNode {
-            childMarkdownRemark {
-              html
-            }
-          }
           copyright
         }
         allDatoCmsProdotti {
