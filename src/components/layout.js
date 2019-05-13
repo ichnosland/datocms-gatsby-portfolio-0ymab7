@@ -22,7 +22,9 @@ const TemplateWrapper = () => {
             ...GatsbyDatoCmsSeoMetaTags
           }
           copyright
+          footer
         }
+      
         allDatoCmsProdotti {
           edges {
             node {
