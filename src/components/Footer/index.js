@@ -1,14 +1,10 @@
 import React from 'react';
-import CookieConsent from 'react-cookie-consent';
+// import CookieConsent from 'react-cookie-consent';
 
-function Footer(data) {
+function Footer(prop) {
   return (
     <footer>
-      <p>{data.data.datoCmsHome.copyright}</p>
-      <p className="mini-p" dangerouslySetInnerHTML={{ __html: data.data.datoCmsHome.footer }}></p>
-      <CookieConsent >
-        <p dangerouslySetInnerHTML={{ __html: data.data.datoCmsHome.cookieBanner }}></p>
-      </CookieConsent>
+      <p>{JSON.stringify(prop.data)}</p>
     </footer>
   );
 }
