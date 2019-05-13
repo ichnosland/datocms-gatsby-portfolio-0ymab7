@@ -2,11 +2,13 @@ import React from 'react';
 
 import { StaticQuery, graphql } from 'gatsby';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
-import HomePage from '../containers/HomePage'
+import HomePage from '../containers/HomePage';
 import '../styles/index.sass';
 
-const TemplateWrapper = () => {
-  return (<StaticQuery query={graphql`
+const TemplateWrapper = function render() {
+  return (
+    <StaticQuery
+      query={graphql`
       query LayoutQuery
       {
         datoCmsSite {
@@ -23,6 +25,7 @@ const TemplateWrapper = () => {
           }
           copyright
           footer
+          cookieBanner
         }
       
         allDatoCmsProdotti {
@@ -44,10 +47,14 @@ const TemplateWrapper = () => {
           }
         }
       }
-  `} render={data => (<div>
-      <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags} />
-     <HomePage data = {data}></HomePage>
-    </div>)} />);
-}
+  `}
+      render={(data) => (
+        <div>
+          <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags} />
+          <HomePage data={data}></HomePage>
+        </div>
+    )}
+    />);
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;

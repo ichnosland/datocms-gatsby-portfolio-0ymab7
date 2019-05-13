@@ -29,13 +29,14 @@ class Main extends React.PureComponent { // eslint-disable-line react/prefer-sta
         <RichiestaContatti
           {...this.props.formContatti}
         />
-        <Footer data={this.props.data}/>
+        <Footer data={this.props.data} />
       </div>
     );
   }
 }
 
 Main.propTypes = {
+  data: PropTypes,
   formContatti: PropTypes.shape({
     spinner: PropTypes.bool.isRequired,
     error_message: PropTypes.string.isRequired,
