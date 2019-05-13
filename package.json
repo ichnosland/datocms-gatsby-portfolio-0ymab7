@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "maieutical labs",
   "dependencies": {
+    "@palmabit/react-cookie-law": "^0.2.4",
     "axios": "^0.17.0",
     "babel-polyfill": "6.23.0",
     "chalk": "1.1.3",
@@ -30,7 +31,6 @@
     "minimist": "1.2.0",
     "prop-types": "15.5.10",
     "react": "^16.8.6",
-    "react-cookie-consent": "^2.3.1",
     "react-dom": "^16.8.6",
     "react-form": "^2.4.0",
     "react-helmet": "^5.2.1",
