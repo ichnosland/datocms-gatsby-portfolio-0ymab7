@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line react/prop-types
 export default ({ data }) => (
   <div>
     <section id="chisiamo" className="filler">

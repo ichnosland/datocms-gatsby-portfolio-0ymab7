@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 export class Survey extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -21,7 +21,7 @@ export class Survey extends React.PureComponent { // eslint-disable-line react/p
         </header>
         <div className="container paragraph">
           <h1>Accordo relativo alla privacy dei sondaggi proposti da Maieutical Labs</h1>
-           </div>
+        </div>
       </div>
     );
   }

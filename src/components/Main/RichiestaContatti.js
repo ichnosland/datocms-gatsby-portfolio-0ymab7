@@ -10,7 +10,6 @@ const errorValidator = (values) => ({
 });
 
 class RichiestaContatti extends React.PureComponent {
-  
 
   render() {
     return (
