@@ -56,6 +56,9 @@ export default ({ element }) => {
         onAccept={() => (console.log('onAccept'))}
         onAcceptStatistics={() => { acceptAnalyticsCookie(); }}
         onDeclineStatistics={() => { declineAnalyticsCookie(); }}
+        styles={{
+          dialog: {},
+        }}
       >
       </CookieBanner>
     </StaticRouter>
