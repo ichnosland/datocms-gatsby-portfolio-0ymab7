@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { StaticQuery, graphql } from 'gatsby';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import HomePage from '../containers/HomePage';
