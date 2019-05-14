@@ -45,12 +45,12 @@ export default ({ element }) => {
         message={"Al fine di offrire il miglior servizio possibile questo sito utilizza cookies tecnici e di terze parti per funzionalità quali l'accesso tramite social network e/o la visualizzazione di media. Se non acconsenti all'utilizzo dei cookie di terze parti, alcune di queste funzionalità potrebbero essere non disponibili. Chiudendo questo banner o proseguendo con la navigazione acconsentirai al loro impiego."}
         policyLink="/privacy"
         privacyPolicyLinkText="Consulta l'informativa sulla privacy"
-        necessaryOptionText="Necessary"
+        necessaryOptionText="Funzionali"
         showPreferencesOption={false}
         showMarketingOption={false}
-        statisticsOptionText="Statistics"
-        acceptButtonText="Accept"
-        declineButtonText="Decline"
+        statisticsOptionText="Statistiche"
+        acceptButtonText="Acconsento"
+        declineButtonText="Non acconsento"
         showDeclineButton={false}
         dismissOnScroll={false}
         onAccept={() => (console.log('onAccept'))}
